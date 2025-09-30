@@ -6,7 +6,12 @@ class DatasetSpec:
     Data model for specifications of an image dataset.
     """
 
-    pass
+    overlap: float #ratio (in 0 to 1) of scene shared between two consecutive images.
+    sidelap: float #ratio (in 0 to 1) of scene shared between two images in adjacent rows.
+    height: float #the height of the scan above the ground (in meters).
+    scan_dimension_x: int #horizontal size of the rectangle to be scanned (in meters).
+    scan_dimension_y: int #vertical size of the rectangle to be scanned (in meters).
+    exposure_time_ms: int #exposure time for each image (in milliseconds).
 
 
 class Camera:
@@ -18,7 +23,14 @@ class Camera:
     - https://en.wikipedia.org/wiki/Pinhole_camera_model
     """
 
-    pass
+    fx: float #focal length along x axis (in pixels)
+    fy: float #focal length along y axis (in pixels)
+    cx: float #optical center of the image along the x axis (in pixels)
+    cy: float #optical center of the image along the y axis (in pixels)
+    sensor_size_x_mm: float #Size of the sensor along the x axis (in mm)
+    sensor_size_y_mm: float #Size of the sensor along the y axis (in mm)
+    image_size_x: int #Number of pixels in the image along the x axis
+    image_size_y: int #Number of pixels in the image along the y axis
 
 
 class Waypoint:
