@@ -29,8 +29,8 @@ class Camera:
     cy: float #optical center of the image along the y axis (in pixels)
     sensor_size_x_mm: float #Size of the sensor along the x axis (in mm)
     sensor_size_y_mm: float #Size of the sensor along the y axis (in mm)
-    image_size_x: int #Number of pixels in the image along the x axis
-    image_size_y: int #Number of pixels in the image along the y axis
+    image_size_x_px: int #Number of pixels in the image along the x axis
+    image_size_y_px: int #Number of pixels in the image along the y axis
 
 
 class Waypoint:
