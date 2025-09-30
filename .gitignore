@@ -230,4 +230,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Remove jupyter
+assets/
+etc/
+settings.json
+
 # End of https://www.toptal.com/developers/gitignore/api/python,venv,windows,visualstudiocode
