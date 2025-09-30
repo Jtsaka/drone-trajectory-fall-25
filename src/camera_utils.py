@@ -34,10 +34,10 @@ def project_world_point_to_image(camera: Camera, world_point: np.ndarray) -> np.
     
     X = world_point[0]
     Y = world_point[1]
-    Z = world_point[2]
+    Z = world_point[2]    
 
-    u = camera.fx*(X/Z)
-    v = camera.fy*(Y/Z)
+    u = camera.fx*(X/Z) + camera.cx #the cx/cy is the intrinsic parameter (offset)
+    v = camera.fy*(Y/Z) + camera.cy
 
     pixel_coords = np.array([u, v])
     
@@ -87,4 +87,4 @@ def compute_ground_sampling_distance(
     GSD_x = footprint_x / camera.image_size_x_px
     GSD_y = footprint_y / camera.image_size_y_px
 
-    return GSD_x, GSD_y
+    return min(GSD_x, GSD_y)

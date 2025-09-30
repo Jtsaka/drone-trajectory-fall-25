@@ -1,6 +1,7 @@
+from dataclasses import dataclass
 """Data models for the camera and user specification."""
 
-
+@dataclass
 class DatasetSpec:
     """
     Data model for specifications of an image dataset.
@@ -13,7 +14,7 @@ class DatasetSpec:
     scan_dimension_y: int #vertical size of the rectangle to be scanned (in meters).
     exposure_time_ms: int #exposure time for each image (in milliseconds).
 
-
+@dataclass
 class Camera:
     """
     Data model for a simple pinhole camera.
