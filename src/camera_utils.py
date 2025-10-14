@@ -36,7 +36,7 @@ def project_world_point_to_image(camera: Camera, world_point: np.ndarray) -> np.
     Y = world_point[1]
     Z = world_point[2]    
 
-    u = camera.fx*(X/Z) + camera.cx #the cx/cy is the intrinsic parameter (offset)
+    u = camera.fx*(X/Z) + camera.cx #the cx/cy is the intrinsic parameter (offset) of camera placement
     v = camera.fy*(Y/Z) + camera.cy
 
     pixel_coords = np.array([u, v])
