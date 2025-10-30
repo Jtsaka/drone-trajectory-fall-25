@@ -1,9 +1,9 @@
 ## Drone Trajectory Planner
-![FlightPlanner](/assets/droneflightplanex1.jpg)
+![FlightPlanner](/drone-trajectory-fall-25\path_planning_imgs\droneflightplanex1.jpg)
 Example of generated boustrophedon drone flight pattern
-![TrapezoidalProfiling](/assets/droneflightplanex2.jpg)
+![TrapezoidalProfiling](/drone-trajectory-fall-25\path_planning_imgs\droneflightplanex2.jpg)
 Example of generated trapezoidal profiling for drone velocity
-![TriangularProfiling](/assets/droneflightplanex3.jpg)
+![TriangularProfiling](/drone-trajectory-fall-25\path_planning_imgs\droneflightplanex3.jpg)
 Example of generated triangular profiling for drone velocity
 Plan, simulate, and visualize drone photo-capture flight over a rectangular area using boustrophedon pattern. Given a camera model and user dataset specs (overlap, sidelap, height, scan size, exposure), the project:
 - computes image spacing from camera geometry
