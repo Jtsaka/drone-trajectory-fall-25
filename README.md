@@ -1,16 +1,13 @@
 ## Drone Trajectory Planner
-![FlightPlanner](/assets/droneflightplanex1.jpg)
-Example of generated boustrophedon drone flight pattern
-![TrapezoidalProfiling](/assets/droneflightplanex2.jpg)
-Example of generated trapezoidal profiling for drone velocity
-![TriangularProfiling](/assets/droneflightplanex3.jpg)
-Example of generated triangular profiling for drone velocity
+
+### About the project:
 Plan, simulate, and visualize drone photo-capture flight over a rectangular area using boustrophedon pattern. Given a camera model and user dataset specs (overlap, sidelap, height, scan size, exposure), the project:
 - computes image spacing from camera geometry
 - lays out capture waypoints in a serpentine grid
 - assigns a safe capture speed from GSD & exposure (motion-blur bound)
 - computes segment timing with a trapezoidal/triangular velocity profile,
 - visualizes both the 2D flight path and the velocity profile (using plotly express)
+- (checkout main.ipynb to view work)
 
 **Conventions & Units**
 - World frame: flat ground plane, nadir-pointing camera, canonical pose
@@ -27,3 +24,14 @@ Plan, simulate, and visualize drone photo-capture flight over a rectangular area
 - Python ≥ 3.9, numpy, pandas, plotly
 - Jupyter users: set plotly renderer (pio.renderers.default = "vscode") if not generating properly
 - Drone trajectory planner system for the [build project](https://hub.buildfellowship.com/projects/drone-flight-planner-system-flight-path-for-efficient-data-capture)
+
+### Examples:
+
+![FlightPlanner](./path_planning_imgs/droneflightplanex1.jpg)
+### Example of generated boustrophedon drone flight pattern
+
+![TrapezoidalProfiling](./path_planning_imgs/droneflightplanex2.jpg)
+### Example of generated trapezoidal profiling for drone velocity
+
+![TriangularProfiling](./path_planning_imgs/droneflightplanex3.jpg)
+### Example of generated triangular profiling for drone velocity
