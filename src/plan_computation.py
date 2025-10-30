@@ -76,7 +76,7 @@ def generate_photo_plan_on_grid(
 
     if num_point_x == 1: #if there's only 1 point available
         offset_x = dataset_spec.scan_dimension_x / 2
-        centers_x = [offset_x]
+        centers_x = [offset_x] #offset so image is centered inside scan boundary, minimizing waste
 
     else:
         cent_dist_x = min(dist_between_img_x, dataset_spec.scan_dimension_x / gaps_x)
